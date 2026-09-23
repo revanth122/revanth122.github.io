@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Download, Mail } from "lucide-react";
+import { Download } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons";
+import CopyEmailButton from "./CopyEmailButton";
 import { profile } from "../data";
 import type { SectionKey } from "../types";
 
@@ -113,9 +114,12 @@ export default function MenuOverlay({
                 <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-text-dim hover:text-accent transition-colors">
                   <LinkedinIcon size={19} />
                 </a>
-                <a href={`mailto:${profile.email}`} aria-label="Email" className="text-text-dim hover:text-accent transition-colors">
-                  <Mail size={19} />
-                </a>
+                <CopyEmailButton
+                  email={profile.email}
+                  iconOnly
+                  size={19}
+                  className="text-text-dim hover:text-accent transition-colors"
+                />
               </div>
             </motion.div>
           </div>

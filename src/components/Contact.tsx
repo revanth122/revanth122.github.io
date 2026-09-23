@@ -1,7 +1,8 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import Reveal from "./Reveal";
 import Magnetic from "./Magnetic";
 import OrbitField from "./OrbitField";
+import CopyEmailButton from "./CopyEmailButton";
 import { GithubIcon, LinkedinIcon } from "./icons";
 import { profile } from "../data";
 
@@ -23,14 +24,12 @@ export default function Contact() {
 
       <Reveal delay={0.15} className="mt-10">
         <Magnetic strength={0.25}>
-          <a
-            href={`mailto:${profile.email}`}
+          <CopyEmailButton
+            email={profile.email}
             className="inline-flex items-center gap-2 rounded-full bg-heading px-7 py-3.5 text-sm font-medium text-bg hover:opacity-90 transition-opacity"
-          >
-            <Mail size={16} />
-            {profile.email}
-          </a>
+          />
         </Magnetic>
+        <p className="mt-3 text-xs text-text-dim">Click to copy — or email me directly</p>
       </Reveal>
 
       <Reveal delay={0.25} className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-text-dim">

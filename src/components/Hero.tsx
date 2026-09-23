@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowDown, Mail } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons";
 import OrbitField from "./OrbitField";
 import Magnetic from "./Magnetic";
+import CopyEmailButton from "./CopyEmailButton";
 import { profile } from "../data";
 import type { SectionKey } from "../types";
 
@@ -101,12 +102,11 @@ export default function Hero({ onOpen }: { onOpen: (section: SectionKey) => void
           {[
             { href: profile.github, icon: GithubIcon, label: "GitHub" },
             { href: profile.linkedin, icon: LinkedinIcon, label: "LinkedIn" },
-            { href: `mailto:${profile.email}`, icon: Mail, label: "Email" },
           ].map(({ href, icon: Icon, label }) => (
             <a
               key={label}
               href={href}
-              target={href.startsWith("mailto") ? undefined : "_blank"}
+              target="_blank"
               rel="noreferrer"
               aria-label={label}
               className="text-text-dim hover:text-accent transition-colors"
@@ -114,6 +114,12 @@ export default function Hero({ onOpen }: { onOpen: (section: SectionKey) => void
               <Icon size={19} />
             </a>
           ))}
+          <CopyEmailButton
+            email={profile.email}
+            iconOnly
+            size={19}
+            className="text-text-dim hover:text-accent transition-colors"
+          />
         </motion.div>
       </motion.div>
 
