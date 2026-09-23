@@ -31,7 +31,7 @@ export default function Nav({ onOpen }: { onOpen: (section: SectionKey) => void 
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="font-display text-[15px] font-semibold tracking-tight text-heading shrink-0"
+            className="font-name text-[15px] font-bold tracking-tight text-heading shrink-0"
           >
             RB
           </button>

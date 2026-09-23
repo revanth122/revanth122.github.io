@@ -50,7 +50,7 @@ export default function Hero({ onOpen }: { onOpen: (section: SectionKey) => void
 
         <motion.h1
           variants={item}
-          className="font-display text-[13vw] sm:text-7xl md:text-8xl font-semibold leading-[0.95] tracking-tight text-heading"
+          className="font-name text-[13vw] sm:text-7xl md:text-8xl font-bold leading-[0.95] tracking-tight text-heading"
         >
           Revanth
           <br />
