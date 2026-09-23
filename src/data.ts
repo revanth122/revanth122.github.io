@@ -10,6 +10,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/revanth-boddupalli/",
   github: "https://github.com/revanth122/",
   resumeUrl: "/Revanth_Boddupalli_Resume.pdf",
+  web3formsAccessKey: "27b97bdc-6e9a-495d-9973-ae3cfed870d2",
   summary:
     "AI Engineer with 1 year and 6 months of experience building and deploying production-grade LLM systems and multimodal AI pipelines using Python, Kubernetes, and cloud services (AWS S3, GCP, Azure). Skilled at guiding adoption and onboarding of AI-driven microservices, architecting scalable data processing workflows with robust MLOps and CI/CD practices for enterprise customers.",
 };
